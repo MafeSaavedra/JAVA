@@ -26,7 +26,8 @@ public class Order {
         
         //Mostramos el array organizado
         // Usamos un formato for each para recorrer el array asignando la info en un variable temporal
-        System.out.println("Nombres ordenados");
+        System.out.println("NOMBRES ORDENADOS");
+        System.out.println("------------------------------------------------------------------------------");
         for (String nombre : nombres){
         System.out.println(nombre);
         }
