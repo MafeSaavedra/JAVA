@@ -1,35 +1,40 @@
 package com.mycompany.prueba;
 
 import java.util.Scanner;
+// Usar metodos de array
 import java.util.Arrays;
 
 public class Order {
-    public static void main(String[] args) {
+    public static void main(String[] args){
+        //Definimos el Scanner
         Scanner input = new Scanner(System.in);
-
-        System.out.println("¿Cuántos nombres vas a escribir?");
+        Scanner inputnombre = new Scanner(System.in);
+        System.out.println("¿Cuantos nombres vas a escribir?");
         int cantidad = input.nextInt();
-        input.nextLine(); // Limpiamos la entrada
-
+        
+        //Definimos el array con el tamaño dado por el usuario
         String[] nombres = new String[cantidad];
-
-        // Pedimos los nombres uno por uno
+        // Pedimos y guardamos los datos uno por uno
         int i = 0;
-        while (i < cantidad) {
-            System.out.println("Escribe un nombre:");
-            nombres[i] = input.nextLine();
-            i++;
+        while (i<cantidad){
+        System.out.println("Escribe el nombre ");
+        nombres[i]= inputnombre.nextLine();
+        i++;
         }
-
-        // Ordenamos los nombres
+        // Ordenamos el array
         Arrays.sort(nombres);
-
-        // Mostramos los nombres ya ordenados
-        System.out.println("Nombres ordenados:");
-        for (String nombre : nombres) {
-            System.out.println(nombre);
+        
+        //Mostramos el array organizado
+        // Usamos un formato for each para recorrer el array asignando la info en un variable temporal
+        System.out.println("Nombres ordenados");
+        for (String nombre : nombres){
+        System.out.println(nombre);
         }
-
         input.close();
+            
     }
+   
+   
+   
+    
 }
